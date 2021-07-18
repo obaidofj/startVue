@@ -1,24 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <obaid />
-  <HR />
-  <IT />
+ <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+  </div>
+  <router-view />
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import obaid from './components/obaid.vue'
-import HR from './components/HR.vue'
-import IT from './components/IT.vue'
+
 
 export default {
   name: 'ep',
   components: {
-    HelloWorld,
-    obaid,
-    HR,
-    IT
+ 
   }
 }
 </script>
