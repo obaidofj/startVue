@@ -1,7 +1,8 @@
 <template>
     HR
     <div>
-     <h3 v-for="(item,i) in employees " :key="i" >{{item.name}}</h3>
+     <h3 v-for="(item,i) in newHR " :key="i" >{{item.name}} {{item.age}} {{item.department}}</h3>
+     <button @click="addToSal">add</button>
     </div>
 </template>
 
@@ -13,12 +14,21 @@ export default defineComponent({
         
     },
     data(){
-        return { employees:[
-            {name:"ahmad",age:22,department:"sales"},
-            {name:"Mohamed",age:33,department:"registration"},
-            {name:"Khaled",age:30,department:"IT"},
-            {name:"Essa",age:28,department:"IT"},
-            ]
+        return { 
+        }
+    },
+     computed:{
+        
+        HR(){
+            return this.$store.state.employees
+        },
+        newHR(){
+            return this.$store.getters.newInfo
+        }
+    },
+    methods:{
+        addToSal(){
+            return this.$store.state.employees.forEach(x=>{return x.salary+=200})
         }
     }
 })

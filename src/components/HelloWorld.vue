@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h4>{{ msg }}</h4>
  
   </div>
 </template>
@@ -12,7 +12,7 @@ export default {
     msg2: String
   },
   data() {
-    return {msg: "HI.."}
+    return {msg: "hi..from msg"}
   }
 }
 </script>

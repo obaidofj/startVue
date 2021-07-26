@@ -2,9 +2,9 @@
    
  
   <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <obaid />
-  <HR />
-  <IT />
+  
+  <HR  />
+  <IT /><obaid />
 </template>
 
 <script>
@@ -15,6 +15,9 @@ import IT from '../components/IT.vue'
 export default {
     setup() {
         
+    },
+    data(){
+return {}
     },
     components: {
     HelloWorld,
