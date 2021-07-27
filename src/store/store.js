@@ -30,8 +30,16 @@ export const store = createStore({
         }
     },
   mutations: {
-    increment (state) {
-      state.count++
+    increaseSalary:state=> {
+      return state.employees.forEach(x=>{x.salary+=200})
+    },
+    decreaseSalary:state=> {
+      return state.employees.forEach(x=>{x.salary-=200})
+    }
+  },
+  actions:{
+    decreaseSal:context=>{
+      setTimeout(()=>{context.commit('decreaseSalary')},2000)
     }
   }
 })

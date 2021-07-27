@@ -2,7 +2,7 @@
     HR
     <div>
      <h3 v-for="(item,i) in newHR " :key="i" >{{item.name}} {{item.age}} {{item.department}}</h3>
-     <button @click="addToSal">add</button>
+     
     </div>
 </template>
 
@@ -26,11 +26,7 @@ export default defineComponent({
             return this.$store.getters.newInfo
         }
     },
-    methods:{
-        addToSal(){
-            return this.$store.state.employees.forEach(x=>{return x.salary+=200})
-        }
-    }
+    
 })
 </script>
 
